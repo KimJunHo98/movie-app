@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { useState } from "react";
+import { API_URL, API_KEY } from "./config/constans";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [myMovies, setMyMovies] = useState([]);
+
+  const getMovies = async () => {
+    const response = await fetch(
+      `${API_URL}/movie/popular?${API_KEY}&language=en-US`
+    );
+    const json = await response.json();
+    const data = json.results;
+
+    try {
+      if (data) {
+        setMyMovies(data);
+        setLoading(false);
+      }
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+
+  useEffect(() => {
+    getMovies();
+  }, []);
+
+  console.log(myMovies);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {loading ? (
+        <h1>loading...</h1>
+      ) : (
+        myMovies.map((movie) => {
+          return (
+            <>
+              <p>{movie.title}</p>
+            </>
+          );
+        })
+      )}
+    </>
   );
 }
 
