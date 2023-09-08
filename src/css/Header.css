@@ -1,0 +1,24 @@
+#header {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.header .logo {
+    width: 100%;
+    padding: 10px 0 20px;
+}
+
+.header .logo .move_to_home {
+    color: #fc2d5a;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+
