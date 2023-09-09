@@ -6,6 +6,7 @@ const Footer = () => {
         <section id="footer">
             <div className="container">
                 <div className="inner">
+                    <h2 className="ir_so">footer</h2>
                     <div className="footer">footer</div>
                 </div>
             </div>

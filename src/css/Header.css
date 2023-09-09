@@ -5,20 +5,62 @@
 
 .header {
     width: 100%;
-    height: 100%;
+    height: 60px;
     display: flex;
     flex-direction: row;
 }
 
 .header .logo {
-    width: 100%;
-    padding: 10px 0 20px;
+    width: 20%;
+    align-self: center;
 }
 
 .header .logo .move_to_home {
     color: #fc2d5a;
     font-size: 3rem;
     font-weight: 600;
+}
+
+.header .nav {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header .nav .nav_list {
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.header .nav .nav_list > li {
+    align-self: center;
+    padding-right: 20px;
+}
+
+.header .nav .nav_list > li > .nav_links {
+    width: 100%;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: lighter;
+    transition: all .3s ease-in;
+}
+
+.header .nav .nav_list > li > .nav_links:hover {
+    color: #fc2d5a;
+}
+
+.header .nav .search_form {
+    align-self: center;
+}
+
+.header .nav .search_form .search_input {
+    width: 100%;
+    padding: 5px 0;
 }
 
 
