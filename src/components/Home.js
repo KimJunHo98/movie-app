@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MovieList from "./MovieList";
 import MoreBtn from "./MoreBtn";
+import Search from "./Search";
 import "../css/MovieList.css";
 
 const Home = () => {
@@ -27,12 +28,16 @@ const Home = () => {
         }
     };
 
+    console.log(myMovies);
+
     useEffect(() => {
         getMovies(endPoint);
     }, []);
 
     const handleLoadMoreClick = () => {
-        const endPoint = `https://yts-proxy.now.sh/list_movies.json?minimum_rating=8.5&sort_by=download_count&limit=20&page=${currentPage + 1}`;
+        const endPoint = `https://yts-proxy.now.sh/list_movies.json?minimum_rating=8.5&sort_by=download_count&limit=20&page=${
+            currentPage + 1
+        }`;
 
         getMovies(endPoint);
     };
@@ -55,6 +60,7 @@ const Home = () => {
                         <div className="inner">
                             <h2 className="ir_so">movie</h2>
                             <div className="movie">
+                                <Search />
                                 <div className="movie_list_wrap">
                                     {myMovies.map((movie) => (
                                         <MovieList key={movie.id} movie={movie} id={movie.id} />

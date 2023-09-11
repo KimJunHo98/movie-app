@@ -23,10 +23,7 @@ const Header = () => {
                                     <Link className="nav_links">About</Link>
                                 </li>
                             </ul>
-                            <form className="search_form">
-                                <label htmlFor="user_search" className="ir_so">search</label>
-                                <input type="text" id="user_search" name="search" value="" placeholder="어떤 영화를 찾으시나요?" className="search_input" />
-                            </form>
+                            <button type="button" className="search_btn">search</button>
                         </nav>
                     </div>
                 </div>

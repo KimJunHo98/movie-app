@@ -7,7 +7,9 @@ const Footer = () => {
             <div className="container">
                 <div className="inner">
                     <h2 className="ir_so">footer</h2>
-                    <div className="footer">footer</div>
+                    <div className="footer">
+                        <h2 className="copy">Copyrightⓒ movie app. KimJinHo</h2>
+                    </div>
                 </div>
             </div>
         </section>

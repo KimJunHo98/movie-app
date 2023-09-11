@@ -37,7 +37,23 @@ const Detail = () => {
                                     <div className="detail_top">
                                         <img src={item.large_cover_image} alt={item.title} className="detail_img" />
                                         <div className="detail_info_items">
-                                            <h2 className="detail_title">{item.title}</h2>
+                                            <h2 className="detail_title">
+                                                {item.title}
+                                                <span className="detail_year">({item.year})</span>
+                                            </h2>
+                                            <ul className="detail_genres_list">
+                                                {item.genres.map((genre) => (
+                                                    <li key={genre} className="detail_genre">
+                                                        {genre}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                            <p className="detail_rating">({item.rating} / 10)</p>
+                                            {item.description_full.length < 500 ? (
+                                                <p className="detail_desc">{item.description_full}...</p>
+                                            ) : (
+                                                <p className="detail_desc">{item.description_full.slice(0, 500)}...</p>
+                                            )}
                                         </div>
                                     </div>
                                     <div className="detail_center"></div>
