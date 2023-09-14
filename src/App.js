@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import Detail from "./components/Detail";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
-import "./css/reset.css";
+import "./css/Style.css";
 
 const App = () => {
     const searchFormRef = useRef(null);

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "../css/Detail.css";
 
 const Detail = () => {
     const { id } = useParams(); // 클릭한 영화의 id 값을 얻어옴, id 값을 그대로 가져오기 위해 변수를 객체처리함

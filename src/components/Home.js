@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MovieList from "./MovieList";
 import MoreBtn from "./MoreBtn";
-import "../css/MovieList.css";
 
 const Home = ({searchFormRef}) => {
     const [loading, setLoading] = useState(true);
