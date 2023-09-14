@@ -1,14 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import MovieList from "./MovieList";
 import MoreBtn from "./MoreBtn";
 import "../css/MovieList.css";
 
-const Home = () => {
+const Home = ({searchFormRef}) => {
     const [loading, setLoading] = useState(true);
     const [myMovies, setMyMovies] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
     const [searchText, setSearchText] = useState("");
-    const searchFormRef = useRef(null);
 
     const endPoint = "https://yts-proxy.now.sh/list_movies.json?minimum_rating=8.5&sort_by=download_count&limit=20&page=1";
 
@@ -76,8 +75,8 @@ const Home = () => {
                         <div className="inner">
                             <h2 className="ir_so">movie</h2>
                             <div className="movie">
-                                <div className="search_box active" ref={searchFormRef}>
-                                    <form className="search_form">
+                                <div className="search_box" ref={searchFormRef}>
+                                    <form className="search_form" onSubmit={(e) => e.preventDefault()}>
                                         <label htmlFor="user_search" className="ir_so">
                                             영화 검색
                                         </label>
@@ -96,11 +95,13 @@ const Home = () => {
                                     </form>
                                 </div>
                                 <div className="movie_list_wrap">
-                                    {myMovies.map((movie) => (
-                                        <MovieList key={movie.id} movie={movie} id={movie.id} />
-                                    ))}
+                                    {filteredMovie.length < 1 ? (
+                                        <p className="nothing">검색한 영화 정보가 없습니다.</p>
+                                    ) : (
+                                        filteredMovie.map((movie) => <MovieList key={movie.id} movie={movie} id={movie.id} />)
+                                    )}
                                 </div>
-                                <MoreBtn handleLoadMoreClick={handleLoadMoreClick} />
+                                {filteredMovie.length < 1 ? null : <MoreBtn handleLoadMoreClick={handleLoadMoreClick} />}
                             </div>
                         </div>
                     </div>

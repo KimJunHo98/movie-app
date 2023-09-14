@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Header.css";
 
-const Header = () => {
+const Header = ({handleSearchbtnClick}) => {
     return (
         <>
             <header id="header">
@@ -23,7 +23,7 @@ const Header = () => {
                                     <Link className="nav_links">About</Link>
                                 </li>
                             </ul>
-                            <button type="button" className="search_btn">search</button>
+                            <button type="button" className="search_btn" onClick={handleSearchbtnClick}>search</button>
                         </nav>
                     </div>
                 </div>
