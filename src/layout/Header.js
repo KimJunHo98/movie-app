@@ -9,14 +9,14 @@ const Header = ({handleSearchbtnClick}) => {
                     <h2 className="ir_so">header</h2>
                     <div className="header">
                         <h1 className="logo">
-                            <Link to={"/"} className="move_to_home">
+                            <Link to="/" className="move_to_home">
                                 Movie
                             </Link>
                         </h1>
                         <nav className="nav">
                             <ul className="nav_list">
                                 <li className="home">
-                                    <Link to={"/"} className="nav_links">Home</Link>
+                                    <Link to="/" className="nav_links">Home</Link>
                                 </li>
                                 <li className="about">
                                     <Link className="nav_links">About</Link>

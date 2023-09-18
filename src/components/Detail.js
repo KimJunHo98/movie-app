@@ -55,8 +55,6 @@ const Detail = () => {
                                             )}
                                         </div>
                                     </div>
-                                    <div className="detail_center"></div>
-                                    <div className="detail_bottom"></div>
                                 </div>
                             ))}
                         </div>

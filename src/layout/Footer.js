@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <section id="footer">
+        <footer id="footer">
             <div className="container">
                 <div className="inner">
                     <h2 className="ir_so">footer</h2>
@@ -11,7 +11,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </footer>
     );
 };
 
