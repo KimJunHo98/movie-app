@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className="inner">
                     <h2 className="ir_so">footer</h2>
                     <div className="footer">
-                        <h2 className="copy">Copyrightⓒ movie app. KimJinHo</h2>
+                        <h2 className="copy">Copyrightⓒ movieflix. KimJinHo</h2>
                     </div>
                 </div>
             </div>
