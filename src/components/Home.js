@@ -54,8 +54,6 @@ const Home = ({searchFormRef}) => {
         return movieTitleLower.includes(searchTextLower);
     });
 
-    console.log(filteredMovie);
-
     return (
         <>
             {loading ? (

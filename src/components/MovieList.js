@@ -6,7 +6,6 @@ const MovieList = ({ movie, id }) => {
         <>
             <div className="movie_list_box">
                 <Link to={`/detail/${id}`} className="move_to_detail">
-                    {/* 클릭한 리스트의 디테일 페이지로 이동(해당 영화의 id 값도 넘겨줌) */}
                     <div className="movie_list_item">
                         <img src={movie.medium_cover_image} alt={movie.title} className="movie_poster" />
                         <h3 className="movie_title">{movie.title}</h3>
