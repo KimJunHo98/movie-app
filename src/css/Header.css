@@ -8,11 +8,8 @@
     height: 60px;
     display: flex;
     flex-direction: row;
-}
-
-.header .logo {
-    width: 20%;
-    align-self: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header .logo .move_to_home {
@@ -22,7 +19,6 @@
 }
 
 .header .nav {
-    width: 80%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -30,7 +26,6 @@
 }
 
 .header .nav .nav_list {
-    width: 90%;
     height: 100%;
     line-height: 100%;
     display: flex;

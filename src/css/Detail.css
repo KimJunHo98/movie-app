@@ -1,6 +1,7 @@
 #detail {
     width: 100%;
     height: 100%;
+    color: #fff;
 }
 
 .detail {
@@ -19,18 +20,21 @@
 }
 
 .detail .detail_top .detail_img {
-    width: 400px;
+    width: 30%;
     margin-right: 50px;
+}
+
+.detail .detail_top .detail_img img {
+    width: 100%;
     object-fit: cover;
 }
 
 .detail .detail_top .detail_info_items {
-    width: 100%;
+    width: auto;
     height: 100%;
     display: flex;
     flex-direction: column;
     padding: 0 20px 0 0;
-    color: #fff;
 }
 
 .detail .detail_top .detail_info_items .detail_title {
@@ -46,10 +50,12 @@
 .detail .detail_top .detail_info_items .detail_genres_list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
 .detail .detail_top .detail_info_items .detail_genres_list .detail_genre {
+    padding-bottom: 10px;
     margin-right: 20px;
 }
 
@@ -57,6 +63,50 @@
     margin-bottom: 50px;
 }
 
-.detail .detail_top .detail_info_items .detail_desc {
-    font-size: 3rem;
+.detail .detail_bottom {
+    width: 80%;
+    padding: 50px 0 100px;
+}
+
+.detail .detail_bottom .detail_desc {
+    font-size: 2.4rem;
+}
+
+/* 미디어쿼리 */
+@media all and (max-width: 1023px) {
+    .detail .detail_top .detail_img {
+        width: 50%;
+    }
+    .detail .detail_bottom .detail_desc {
+        font-size: 2rem;
+    }
+}
+@media all and (max-width: 767px) {
+    .detail .detail_top .detail_info_items {
+        padding: 0;
+    }
+    .detail .detail_top .detail_info_items .detail_title {
+        font-size: 3rem;
+    }
+    .detail .detail_bottom {
+        width: 100%;
+    }
+    .detail .detail_bottom .detail_desc {
+        font-size: 1.6rem;
+    }
+}
+@media all and (max-width: 481px) {
+    .detail .detail_top {
+        flex-direction: column;
+    }
+    .detail .detail_top .detail_img {
+        width: 100%;
+    }
+    .detail .detail_top .detail_info_items {
+        padding: 0;
+        margin-top: 30px;
+    }
+    .detail .detail_bottom .detail_desc {
+        font-size: 1.6rem;
+    }
 }
