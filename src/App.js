@@ -5,7 +5,7 @@ import Detail from "./components/Detail";
 import NotFound from "./components/NotFound";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
-import "./css/style.css";
+import "./css/Style.css";
 
 const App = () => {
     const searchFormRef = useRef(null);
